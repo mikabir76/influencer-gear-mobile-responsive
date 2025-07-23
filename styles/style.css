@@ -105,14 +105,54 @@ nav {
     flex-basis: 50%;
 }
 
+.banner-title,
+.banner-content .description,
+.banner-content .primary-btn,
+.banner-img,
+.banner-img img {
+    opacity: 0;
+}
+
 .banner-title {
     font-size: 3rem;
     font-weight: bold;
     line-height: 72px;
+    /* opacity: 0; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: loading 2s ease-out 0.5s forwards;
+
+}
+
+.banner-content .description {
+    animation: loading 3s ease-out 1s forwards;
+
+}
+
+.banner-content .primary-btn {
+    animation: loading 4s ease-out 2s forwards;
+
 }
 
 .banner-img {
     background-image: url(../images/Circle\ design.svg);
+    animation: loading 5s ease-out 1.5s forwards;
+}
+
+.banner-img img {
+    animation: loading 5.5s ease-out 2s forwards;
+}
+
+/* Banner site animation */
+@keyframes loading {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 /* Company Container */
